@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Info from "./Components/Info";
 import AllTasks from "./Components/AllTasks";
 import AddTask from "./Components/AddTask";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" component={Info} />
         <Route exact path="/all" component={AllTasks} />
         <Route exact path="/add" component={AddTask} />
+        <Route component={NotFound} />
     </Switch>
     </BrowserRouter>
     
