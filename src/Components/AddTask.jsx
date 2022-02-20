@@ -1,4 +1,5 @@
 import { FormControl, FormGroup, InputLabel, Input, Button, makeStyles, Typography } from "@material-ui/core";
+import { useState } from "react";
 
 const useStyle = makeStyles({
     container: {
@@ -10,15 +11,30 @@ const useStyle = makeStyles({
     }
 })
 
+const initialValues = {
+    name: "",
+    username: "",
+    email: "",
+    phone: ""
+} 
+
 const AddTask = () => {
+
+    const [ user, setUser ] = useState(initialValues);
+    const { name, username, email, phone } = user;
+
     const classes = useStyle();
+    const onValueChange = (e) => {
+        // console.log(e.target.value);
+        setUser({ ...user, [e.target.name]: e.target.value})
+    }
     return (
         
         <FormGroup className={classes.container}>
             <Typography variant="h4">Add Task</Typography>
             <FormControl>
                 <InputLabel>Name</InputLabel>
-                <Input />
+                <Input onChange={(e) => onValueChange(e)}/>
             </FormControl>
             <FormControl>
                 <InputLabel>Username</InputLabel>
