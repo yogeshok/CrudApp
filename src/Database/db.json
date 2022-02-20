@@ -6,6 +6,14 @@
             "email" : "yogiky2002@gmail.com",
             "phone" : "8453545324",
             "id" : 1
+        },
+        {
+            "name" : "Yogesh Kumar",
+            "username" : "Yogesh_kmr11",
+            "email" : "yogiky2002@gmail.com",
+            "phone" : "8453545324",
+            "id" : 2
         }
+
     ]
 }
