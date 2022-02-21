@@ -1,5 +1,6 @@
 import { FormControl, FormGroup, InputLabel, Input, Button, makeStyles, Typography } from "@material-ui/core";
 import { useState } from "react";
+import { addUser } from "../Service/api";
 
 const useStyle = makeStyles({
     container: {
@@ -27,28 +28,33 @@ const AddTask = () => {
     const onValueChange = (e) => {
         // console.log(e.target.value);
         setUser({ ...user, [e.target.name]: e.target.value})
+        // console.log(user);
     }
+    const addUserDetails = async () => {
+        await addUser(user);
+    }
+
     return (
         
         <FormGroup className={classes.container}>
             <Typography variant="h4">Add Task</Typography>
             <FormControl>
                 <InputLabel>Name</InputLabel>
-                <Input onChange={(e) => onValueChange(e)}/>
+                <Input onChange={(e) => onValueChange(e)} name="name" value={name}/>
             </FormControl>
             <FormControl>
                 <InputLabel>Username</InputLabel>
-                <Input />
+                <Input onChange={(e) => onValueChange(e)} name="username" value={username}/>
             </FormControl>
             <FormControl>
                 <InputLabel>Email</InputLabel>
-                <Input />
+                <Input onChange={(e) => onValueChange(e)} name="email" value={email}/>
             </FormControl>
             <FormControl>
                 <InputLabel>Phone</InputLabel>
-                <Input />
+                <Input onChange={(e) => onValueChange(e)} name="phone" value={phone}/>
             </FormControl>
-            <Button variant="contained" color="primary">Add Task</Button>
+            <Button variant="contained" onClick={() => addUserDetails()} color="primary">Add Task</Button>
         </FormGroup>
     )
 }

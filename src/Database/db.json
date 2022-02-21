@@ -1,19 +1,25 @@
 {
-    "users":[
-        {
-            "name" : "Yogesh Kumar",
-            "username" : "Yogesh_kmr11",
-            "email" : "yogiky2002@gmail.com",
-            "phone" : "8453545324",
-            "id" : 1
-        },
-        {
-            "name" : "Yogesh Kumar",
-            "username" : "Yogesh_kmr11",
-            "email" : "yogiky2002@gmail.com",
-            "phone" : "8453545324",
-            "id" : 2
-        }
-
-    ]
+  "users": [
+    {
+      "name": "Yogesh Kumar",
+      "username": "Yogesh_kmr11",
+      "email": "yogiky2002@gmail.com",
+      "phone": "8453545324",
+      "id": 1
+    },
+    {
+      "name": "Yogesh Kumar",
+      "username": "Yogesh_kmr11",
+      "email": "yogiky2002@gmail.com",
+      "phone": "8453545324",
+      "id": 2
+    },
+    {
+      "name": "Priyanka Yadav",
+      "username": "Priya002",
+      "email": "priyankayadav0204@gmail.com",
+      "phone": "5422637246",
+      "id": 3
+    }
+  ]
 }
