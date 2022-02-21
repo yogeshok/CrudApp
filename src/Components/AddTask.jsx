@@ -1,6 +1,7 @@
 import { FormControl, FormGroup, InputLabel, Input, Button, makeStyles, Typography } from "@material-ui/core";
 import { useState } from "react";
 import { addUser } from "../Service/api";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const useStyle = makeStyles({
     container: {
@@ -25,6 +26,8 @@ const AddTask = () => {
     const { name, username, email, phone } = user;
 
     const classes = useStyle();
+    const history = useHistory();
+
     const onValueChange = (e) => {
         // console.log(e.target.value);
         setUser({ ...user, [e.target.name]: e.target.value})
@@ -32,6 +35,7 @@ const AddTask = () => {
     }
     const addUserDetails = async () => {
         await addUser(user);
+        history.push('./all');
     }
 
     return (
