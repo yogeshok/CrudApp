@@ -1,4 +1,4 @@
-import { TableBody, TableCell, TableHead, TableRow, Table, makeStyles } from "@material-ui/core";
+import { TableBody, TableCell, TableHead, TableRow, Button, Table, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { getUsers } from "../Service/api";
 
@@ -46,6 +46,7 @@ const AllTasks = () => {
                     <TableCell>Username</TableCell>
                     <TableCell>Email</TableCell>
                     <TableCell>Phone</TableCell>
+                    <TableCell></TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -58,6 +59,10 @@ const AllTasks = () => {
                             <TableCell>{user.username}</TableCell>
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.phone}</TableCell>
+                            <TableCell>
+                                <Button variant="contained" color="primary" style={{marginRight: 20}}>Edit</Button>
+                                <Button variant="contained" color="secondary">Delete</Button>
+                            </TableCell>
                         </TableRow>
                         )
                     })
