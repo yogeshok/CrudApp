@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "Yogesh Kumar",
+      "name": "Yogesh Kmr",
       "username": "Yogesh_kmr11",
       "email": "yogiky2002@gmail.com",
       "phone": "8453545324",
@@ -11,13 +11,13 @@
       "name": "Yogesh Kumar",
       "username": "Yogesh_kmr11",
       "email": "yogiky2002@gmail.com",
-      "phone": "8453545324",
+      "phone": "845354",
       "id": 2
     },
     {
       "name": "Priyanka Yadav",
       "username": "Priya002",
-      "email": "priyankayadav0204@gmail.com",
+      "email": "priyankaya0204@gmail.co",
       "phone": "5422637246",
       "id": 3
     },
@@ -27,6 +27,13 @@
       "email": "nakul256@gmail.com",
       "phone": "7342334576",
       "id": 4
+    },
+    {
+      "name": "ashwin",
+      "username": "ashwin2040",
+      "email": "ashashash@gmail.com",
+      "phone": "755748685",
+      "id": 5
     }
   ]
 }

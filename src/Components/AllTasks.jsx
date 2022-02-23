@@ -1,6 +1,7 @@
 import { TableBody, TableCell, TableHead, TableRow, Button, Table, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { getUsers } from "../Service/api";
+import { Link } from "react-router-dom";
 
 const useStyle = makeStyles({
     table: {
@@ -60,7 +61,7 @@ const AllTasks = () => {
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.phone}</TableCell>
                             <TableCell>
-                                <Button variant="contained" color="primary" style={{marginRight: 20}}>Edit</Button>
+                                <Button variant="contained" color="primary" style={{marginRight: 20}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
                                 <Button variant="contained" color="secondary">Delete</Button>
                             </TableCell>
                         </TableRow>
