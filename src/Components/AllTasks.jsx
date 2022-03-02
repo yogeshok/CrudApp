@@ -1,6 +1,6 @@
 import { TableBody, TableCell, TableHead, TableRow, Button, Table, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { getUsers } from "../Service/api";
+import { getUsers, deleteUser } from "../Service/api";
 import { Link } from "react-router-dom";
 
 const useStyle = makeStyles({
@@ -38,6 +38,12 @@ const AllTasks = () => {
         console.log(response.data);
         setUsers(response.data);
     }
+
+    const deleteUserData = async (id) => {
+        await deleteUser(id);
+        getAllUsers();
+    }
+
     return (
         <Table className={classes.table}>
             <TableHead>
@@ -52,8 +58,7 @@ const AllTasks = () => {
             </TableHead>
             <TableBody>
                 {
-                    users.map(user => {
-                        return (
+                    users.map(user => (
                         <TableRow className= {classes.row}>
                             <TableCell>{user.id}</TableCell>
                             <TableCell>{user.name}</TableCell>
@@ -62,12 +67,12 @@ const AllTasks = () => {
                             <TableCell>{user.phone}</TableCell>
                             <TableCell>
                                 <Button variant="contained" color="primary" style={{marginRight: 20}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
-                                <Button variant="contained" color="secondary">Delete</Button>
+                                <Button variant="contained" color="secondary" onClick= {() => deleteUserData(user.id)}>Delete</Button>
                             </TableCell>
                         </TableRow>
                         )
-                    })
-                }
+                    )
+                    }
             </TableBody>
         </Table>
     )
